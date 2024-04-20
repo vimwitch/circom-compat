@@ -355,7 +355,7 @@ fn deserialize_g2<R: Read>(reader: &mut R) -> IoResult<G2Affine> {
     if infinity {
         Ok(G2Affine::identity())
     } else {
-        Ok(G2Affine::new(f1, f2))
+        Ok(G2Affine::new_unchecked(f1, f2))
     }
 }
 
